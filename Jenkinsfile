@@ -6,7 +6,7 @@ pipeline {
         stage('Preparacion'){
             steps {
                 //aqui poner el url del github de nuestro proyecto Backend
-                git 'git@github.com:joseht88/simple-php-website.git'
+                git 'https://github.com/JOSUEPinedo/backend.git'
    	       		echo 'Pulled from github successfully'
             }
         }
