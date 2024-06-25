@@ -19,8 +19,8 @@ pipeline {
 
         stage('Unit Test php'){
             steps {
-                sh 'chmod +x vendor/bin/phpunit'
-                sh 'vendor/bin/phpunit'
+                sh 'chmod +x ./vendor/bin/phpunit'
+                sh './vendor/bin/phpunit'
             }
         }
          //Revisa la calidad de código con SonarQube
