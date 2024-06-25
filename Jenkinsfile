@@ -19,7 +19,6 @@ pipeline {
 
         stage('Unit Test php'){
             steps {
-                //sh 'chmod 0775 vendor/bin/phpunit'
                 sh 'chmod +x vendor/bin/phpunit'
                 sh 'vendor/bin/phpunit'
             }
