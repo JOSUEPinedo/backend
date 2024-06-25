@@ -6,7 +6,7 @@ pipeline {
         stage('Preparacion'){
             steps {
                 //aqui poner el url del github de nuestro proyecto Backend
-                git 'https://github.com/JOSUEPinedo/backend.git'
+                git branch:'main',git 'https://github.com/JOSUEPinedo/backend.git'
    	       		echo 'Pulled from github successfully'
             }
         }
@@ -19,10 +19,8 @@ pipeline {
 
         stage('Unit Test php'){
             steps {
-                //sh 'chmod 0775 vendor/bin/phpunit'
                 sh 'chmod +x vendor/bin/phpunit'
-                sh 'chmod +x ./vendor/bin/phpunit'
-                sh './vendor/bin/phpunit'
+                sh 'vendor/bin/phpunit'
             }
         }
          //Revisa la calidad de código con SonarQube
