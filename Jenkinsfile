@@ -21,7 +21,8 @@ pipeline {
             steps {
                 //sh 'chmod 0775 vendor/bin/phpunit'
                 sh 'chmod +x vendor/bin/phpunit'
-                sh 'vendor/bin/phpunit'
+                sh 'chmod +x ./vendor/bin/phpunit'
+                sh './vendor/bin/phpunit'
             }
         }
          //Revisa la calidad de código con SonarQube
